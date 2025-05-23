@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Food Valley - Delicious Restaurant</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff8f0;
+    color: #333;
+  }
+  header {
+    background: #ff6f3c;
+    padding: 20px 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header h1 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin: 0;
+    letter-spacing: 2px;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 24px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+  }
+  nav a:hover {
+    color: #ffe6d0;
+  }
+  .hero {
+    background: url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-shadow: 1px 2px 4px rgba(0,0,0,0.7);
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255,111,60,0.55);
+    z-index: 1;
+  }
+  .hero-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    max-width: 600px;
+    padding: 0 20px;
+  }
+  .hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+  }
+  .btn {
+    background: #fff8f0;
+    color: #ff6f3c;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(255,111,60,0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  .btn:hover {
+    background: #ff6f3c;
+    color: white;
+    box-shadow: 0 14px 30px rgba(255,111,60,0.5);
+  }
+  section.menu {
+    padding: 60px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  section.menu h3 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #ff6f3c;
+  }
+  .menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+  }
+  .menu-card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    width: 260px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .menu-card:hover {
+    transform: translateY(-8px);
+  }
+  .menu-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .menu-content {
+    padding: 20px;
+  }
+  .menu-content h4 {
+    margin: 0 0 10px;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #ff6f3c;
+  }
+  .menu-content p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0 0 15px;
+  }
+  .menu-content .price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+  }
+  footer {
+    background: #ff6f3c;
+    color: white;
+    text-align: center;
+    padding: 24px 20px;
+    font-size: 0.9rem;
+    margin-top: 60px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+    }
+    header {
+      justify-content: center;
+    }
+    .menu-items {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Food Valley</h1>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#order">Order Now</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to Food Valley</h2>
+      <p>Experience the taste of fresh, delicious meals made with love and finest ingredients.</p>
+      <a href="#order" class="btn">Order Now</a>
+    </div>
+  </section>
+  
+  <section class="menu" id="menu">
+    <h3>Our Delicious Menu</h3>
+    <div class="menu-items">
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Grilled Chicken Salad" />
+        <div class="menu-content">
+          <h4>Grilled Chicken Salad</h4>
+          <p>Fresh greens topped with marinated grilled chicken breast and house dressing.</p>
+          <div class="price">₹320</div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Margarita Pizza" />
+        <div class="menu-content">
+          <h4>Margarita Pizza</h4>
+          <p>Classic handmade pizza with fresh mozzarella, basil, and tomato sauce.</p>
+          <div class="price">₹450</div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Creamy Pasta" />
+        <div class="menu-content">
+          <h4>Creamy Alfredo Pasta</h4>
+          <p>Tagliatelle pasta tossed in creamy homemade Alfredo sauce topped with parmesan.</p>
+          <div class="price">₹380</div>
+        </div>
+      </div>
+      <div class="menu-card">
+        <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb36?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chocolate Cake" />
+        <div class="menu-content">
+          <h4>Chocolate Lava Cake</h4>
+          <p>Warm chocolate cake filled with molten chocolate fudge center.</p>
+          <div class="price">₹250</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="order" id="order" style="padding:60px 40px; max-width:600px; margin: 0 auto;">
+    <h3 style="text-align:center; color:#ff6f3c; font-weight:600; margin-bottom:32px;">Place Your Order</h3>
+    <form id="orderForm" style="background:#fff8f0; padding:24px; border-radius: 16px; box-shadow: 0 4px 20px rgba(255,111,60,0.15);">
+      <label for="name" style="display:block; margin-bottom:8px; font-weight:600;">Name</label>
+      <input type="text" id="name" name="name" required style="width: 100%; padding:10px 14px; margin-bottom:16px; border: 1px solid #ccc; border-radius: 8px;" />
+      
+      <label for="phone" style="display:block; margin-bottom:8px; font-weight:600;">Phone</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" placeholder="10-digit number" style="width: 100%; padding:10px 14px; margin-bottom:16px; border: 1px solid #ccc; border-radius: 8px;" />
+      
+      <label for="orderDetails" style="display:block; margin-bottom:8px; font-weight:600;">Order Details</label>
+      <textarea id="orderDetails" name="orderDetails" required rows="4" placeholder="Your order here..." style="width: 100%; padding:10px 14px; margin-bottom:16px; border: 1px solid #ccc; border-radius: 8px;"></textarea>
+      
+      <button type="submit" class="btn" style="width: 100%;">Submit Order</button>
+    </form>
+    <p id="orderMessage" style="margin-top: 16px; text-align:center; font-weight: 600;"></p>
+  </section>
+
+  <section id="contact" style="background:#ff6f3c; color:white; padding:40px;">
+    <h3 style="text-align:center; font-weight:600; margin-bottom:24px;">Contact Us</h3>
+    <p style="max-width: 600px; margin: 0 auto; text-align: center; font-size: 1.1rem;">
+      Food Valley, 123 Food Street, Flavor Town, India<br />
+      Phone: +91 98765 43210<br />
+      Email: contact@foodvalley.com
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2024 Food Valley. All rights reserved.
+  </footer>
+
+<script>
+  document.getElementById('orderForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = this.name.value.trim();
+    const phone = this.phone.value.trim();
+    const orderDetails = this.orderDetails.value.trim();
+    const messageEl = document.getElementById('orderMessage');
+    if(name && phone && orderDetails) {
+      messageEl.style.color = "#28a745";
+      messageEl.textContent = 'Thank you, ' + name + '! Your order has been received. We will contact you shortly.';
+      this.reset();
+    } else {
+      messageEl.style.color = "#dc3545";
+      messageEl.textContent = 'Please fill all the fields correctly before submitting.';
+    }
+  });
+</script>
+</body>
+</html>
+
